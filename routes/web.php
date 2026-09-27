@@ -1,15 +1,20 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Livewire\Volt\Volt;
 
 Route::view('/', 'welcome');
 
-Route::view('dashboard', 'dashboard')
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
+// گروه‌بندی روت‌های نیازمند احراز هویت
+Route::middleware(['auth', 'verified'])->group(function () {
+    // داشبورد اصلی: لیست پروژه‌ها (کامپوننت Volt)
+    Volt::route('/dashboard', 'project-list')->name('dashboard');
 
-Route::view('profile', 'profile')
-    ->middleware(['auth'])
-    ->name('profile');
+    // صفحه اختصاصی تسک‌های هر پروژه
+    Volt::route('/projects/{project}', 'tasks.index')->name('projects.show');
+
+    // مدیریت پروفایل
+    Route::view('profile', 'profile')->name('profile');
+});
 
 require __DIR__.'/auth.php';
