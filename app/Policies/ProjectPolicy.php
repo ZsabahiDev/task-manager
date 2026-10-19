@@ -7,6 +7,14 @@ use App\Models\User;
 
 class ProjectPolicy
 {
+    // 👈 این متد به Admin اجازه دسترسی به همه چیز را می‌دهد
+    public function before(User $user, string $ability): bool|null
+    {
+        if ($user->role === 'admin') {
+            return true;
+        }
+        return null; // برای بقیه کاربران، برو سراغ شرط‌های عادی
+    }
     /**
      * مشاهده لیست پروژه‌ها یا یک پروژه خاص.
      */

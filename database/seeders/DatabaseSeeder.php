@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Ali User',
             'email' => 'ali@example.com',
             'password' => bcrypt('password'),
+            'role' => 'admin',
         ]);
 
         // ۲. ساخت همکاران
