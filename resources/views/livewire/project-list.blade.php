@@ -77,6 +77,7 @@ $createProject = function () {
                     {{-- لینک هدایت به صفحه تسک‌های پروژه --}}
                     <a
                         href="{{ route('projects.show', $project->id) }}"
+                        wire:navigate
                         class="text-sm font-medium text-indigo-600 hover:text-indigo-800 transition"
                     >
                         ورود به پروژه ←
