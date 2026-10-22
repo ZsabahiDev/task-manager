@@ -7,6 +7,20 @@
 - **Framework:** Laravel 13
 - **Frontend:** Livewire 4 & Tailwind CSS
 - **Database:** MySQL
+- 
+## پیش‌نمایش رابط کاربری (UI)
+
+### صفحه ورود (Landing Page)
+![Welcome Page](screenshots/welcome.png)
+
+### داشبورد پروژه‌ها (Projects Dashboard)
+![Projects Dashboard](screenshots/projects-dashboard.png)
+
+### مدیریت تسک‌ها و فیلترهای زنده (Real-time Filtering)
+![Tasks List](screenshots/tasks-list.png)
+
+### فرم ایجاد تسک (Glassmorphism & Many-to-Many Relationships)
+![Task Modal](screenshots/task-modal.png)
 
 ##   نحوه نصب و اجرا (محیط توسعه با Docker & Sail) 
 

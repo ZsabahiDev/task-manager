@@ -4,7 +4,9 @@ use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 
 
-Route::redirect('/', '/dashboard');
+Route::get('/', function () {
+    return view('welcome');
+});
 // گروه‌بندی روت‌های نیازمند احراز هویت
 Route::middleware(['auth', 'verified'])->group(function () {
     // داشبورد اصلی: لیست پروژه‌ها (کامپوننت Volt)
